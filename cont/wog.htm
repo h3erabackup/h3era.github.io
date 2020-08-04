@@ -1,0 +1,167 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>.wog</title></head> 
+<body  background="../Img/logo/intile.jpg">
+<p align="center"><b><font size="5">Файлы .wog</font></b></p>
+<p>Файлы .wog - это 
+		переименованные архивы <b>.rar</b>. Можно использовать любой уровень 
+			компрессии в <b>WinRAR</b>. Внутри могут быть любые файлы, но <i>должны</i> 
+			содержаться следующие управляющие файлы:<br>
+			<br>
+			<font id="red">
+			<b>h3bitmap.txt</b><br>
+			</font>Список файлов для заливки в h3bitmap.lod, каждый следующий файл на 
+			новой строке<br>
+			<br>
+			<font id="red">
+			<b>h3sprite.txt</b><br>
+			</font>Список файлов для заливки в h3sprite.lod, каждый следующий файл на 
+			новой строке<br>
+			<br>
+			<font id="red">
+			<b>instmult.txt</b><br>
+			</font>Неизвестно. Во всех архивах имеют вот такой вид:<br>
+			
+			</p>
+			
+			<p><b><font color="#800080">[PICS]</font><font color="#FF00FF"><br>
+			</font><font color="#C0C0C0">
+			<br>
+			</font><font color="#800080">[MUSIC]</font></b></p>
+<p><u>Детали:</u></p>
+<p><font id="red">
+			<b>inform.txt</b><br>
+			</font><font color="#800080">
+			<b>[GeneralName]</b></font><font color="#C0C0C0"><br>
+			</font>На новой строке идёт название файла, под которым он будет 
+			отображаться при установке<br>
+			<br>
+			<font color="#800080">
+			<b>[WhatAboutVrotAbout]</b></font><font color="#C0C0C0"><br>
+			</font>На новой строке идёт дополнительная информация - обычно это 
+			информация об авторе и краткое описание. Переводов строки не должно 
+			быть, иначе текст на новой строке игнорируется.<br>
+			
+			</p>
+			<p><b>[GeneralName]<br>
+			<i>ERM Help &amp; Scripter<br>
+			</i>
+			<br>
+			[WhatAboutVrotAbout]<br>
+			<i>Packed on 25.08.2004</i></b><i><br>
+			</i>
+			</p>
+			<font id="red">
+			<b>action.txt</b><br>
+			</font><font color="#800080">
+			<b>[REGEDIT]</b></font><font color="#C0C0C0"><br>
+			</font>Используется для изменения реестра.<br>
+			На первой строке идёт путь к ключу. Ключ создаётся внутри 
+			HKEY_LOCAL_MACHINE.<br>
+			Затем идёт список присваиваемых атрибутов вида 
+			&quot;Атрибут&quot;=&quot;Значение&quot; для строковых ключей и 
+			&quot;Атрибут&quot;=dword:значение для чисел.<br>
+			Похоже, возможно создавать только один ключ и параметры внутри 
+			него.<br>
+			
+			<p><b>[REGEDIT]<br>
+			<i>Software\New Life of Heroes\Heroes of Might and Magic III\3.5<br>
+			&quot;WoG_Version&quot;=&quot;3.53&quot;</i></b><i><br>
+			
+			</i></p>
+<b>[REGEDIT]<br>
+			<i>Software\MegaSoft\ERM Scripter<br>
+			&quot;SynCompletionProposal1_Width&quot;=dword:350<br>
+			&quot;SynCompletionProposal2_Width&quot;=dword:350</i></b><p><br>
+			Если атрибут пуст, устанавливается <i>(значение по умолчанию)</i> у 
+			ключа.<br>
+			
+			</p>
+			<p><b>[REGEDIT]<br>
+			<i>Software\hi<br>
+			&quot;&quot;=&quot;hi!&quot;</i></b></p>
+			<font color="#800080"><b>[INSTALL]</b></font><font color="#C0C0C0"><br>
+			</font>Здесь идут команды вида:<br>
+			XXXX &quot;параметр&quot; W+&quot;параметр 2&quot;<br>
+			XXXX - команда.<br>
+			<b>W+</b> означает, что операция производится в папке Героев. Некоторые 
+			команды поддерживают другие базовые папки:<br>
+			<b>P+</b> меню &quot;Программы&quot; в &quot;Пуск&quot;<br>
+			<b>I+</b> рабочий стол<br>
+			Если ничего из вышеперечисленного не указано, операция производится 
+			во временной папке.<br>
+			<br>
+			<b><font color="#800080">VERS &quot;параметр&quot;</font><font color="#C0C0C0"><br>
+			</font>
+			</b> Неизвестно. Возможно, версия синтаксиса. Обычно используется 
+			параметр &quot;C&quot; или &quot;A&quot;.<br>
+			<font color="#C0C0C0">
+			<b></font><br>
+<font color="#800080">DELL &quot;файл&quot; W+&quot;папка&quot;</font><font color="#C0C0C0"><br>
+			</font>
+			</b> Удаляет файл(ы) в папке. В параметре &quot;файл&quot; можно указать любую 
+			маску.<b><font color="#C0C0C0"></font><br>
+<i>DELL &quot;*.*&quot; W+&quot;erm_help\images\&quot;</i></b><p><br>
+			Можно удалять и папки:<b><font color="#C0C0C0"></font><br>
+<font color="#800080">DELL &quot;format&quot; W+&quot;erm_help\&quot;</font></b></p>
+			<br>
+			<font color="#800080">
+			<b>UNRA &quot;файл&quot; W+&quot;папка&quot;</b></font><font color="#C0C0C0"><br>
+			</font>Извлекает файл из архива в заданную папку. Если папки, куда 
+			производится копирование не существует, то она создаётся.<br>
+			В качестве параметра &quot;файл&quot; могут идти некоторые маски, например, 
+			&quot;*.*&quot;<br>
+			Внимание: Не любые маски поддерживаются, например, команда UNRA 
+			&quot;script*.*&quot; W+ извлечёт все файлы, а не только те, что начинаются на 
+			&quot;script&quot;.<br>
+			
+			<p><font color="#800080"><b>UNRA &quot;Mapmaker Tools.txt&quot; W+&quot;erm_s\&quot;</b></font></p>
+<p>
+			<br>
+			<b><font color="#800080">EXEC &quot;файл&quot; W+&quot;папка&quot;</font><br>
+			</b>Запускает указанный файл из указанной папки. В параметре &quot;файл&quot; 
+			можно указывать маску.<br>
+			Внимание: файлы запускаются в конце установки, поэтому вы не сможете 
+			удалить запущенные файлы после запуска.<br>
+			<br>
+			<b><font color="#800080">CMPC &quot;файлы&quot; W+&quot;папка&quot;</font><br>
+			</b>Копирует файлы в папку. В параметре &quot;файлы&quot; можно использовать 
+			маску. Он должен содержать полный путь к файлам относительно папки 
+			Героев.<br>
+			Внимание: копирование не происходит, если папка, куда производится 
+			копирование, не существует.<br>
+			
+			</p>
+			<p><font color="#800080"><b>CMPC &quot;erm_help\*.*&quot; W+&quot;erm_help\backup\&quot;</b></font></p>
+			<br>
+			<br>
+			<b><font color="#800080">SRCH &quot;файл&quot; W+&quot;сообщение&quot;</font><br>
+			</b>Проверяет существование указанного файла. Если файл не существует, 
+			выводит указанное сообщение. Может искать файл по маске. Если хоть 
+			один файл, удовлетворяющий маске, существует, сообщение не выводится.<br>
+			Сообщение может состоять из нескольких строк, но вместо перевода 
+			строки надо писать @@.<br>
+			Во всех существующих wog-файлах используется просто для вывода 
+			сообщений.<br>
+			
+			<p><i><b>SRCH &quot;--------.---&quot; W+&quot;ERM Help and Tools are installed 
+			succesfully@@Новая строка.&quot;</b></i></p>
+<p><br>
+			<br>
+			<b>
+			<font color="#800080">
+			MDIR &quot;название папки&quot; W+&quot;путь&quot;</font><font color="#FF00FF"><br>
+			</font>
+			</b>Создаёт папку в указанном месте. Поддерживает и W+, и P+, и I+.<br>
+			
+			</p>
+			<p><font color="#800080"><b>MDIR &quot;New Life of Heroes&quot; P+</b></font></p>
+			<br>
+			<br>
+			<font color="#800080">
+			<b>ICON &quot;название ярлыка&quot; I+&quot;путь к файлу&quot;</b></font><font color="#FF00FF"><br>
+			</font>Создаёт ярлык. Поддерживает только P+ и I+. Если ранее шла команда 
+			MDIR, создаёт ярлык внутри указанной в той команде директории.<br>
+			
+			<p><b>MDIR &quot;New Life of Heroes&quot; P+<br>
+			ICON &quot;ERM Script Editor for Heroes III In the Wake of Gods&quot; 
+			P+&quot;erm_s\erm_s.exe&quot;</b></p></body></html>
